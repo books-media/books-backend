@@ -12,6 +12,7 @@ public class Art {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
+    private String imageUrl;
 
     //TODO: talk to someone(Merry?) about what sort of things people want to save about art pieces
 
