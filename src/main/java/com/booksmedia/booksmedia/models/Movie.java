@@ -15,6 +15,7 @@ public class Movie {
     private Long id;
     private String title;
     private String imdbLink;
+    private String imageUrl;
     private boolean owned;
     private Date lastWatched;
 
@@ -24,9 +25,11 @@ public class Movie {
 
     //**********************************************************
 
-    public Movie(String title, String imdbLink, boolean owned, Date lastWatched) {
+
+    public Movie(String title, String imdbLink, String imageUrl, boolean owned, Date lastWatched) {
         this.title = title;
         this.imdbLink = imdbLink;
+        this.imageUrl = imageUrl;
         this.owned = owned;
         this.lastWatched = lastWatched;
     }
@@ -59,6 +62,14 @@ public class Movie {
 
     public void setImdbLink(String imdbLink) {
         this.imdbLink = imdbLink;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public boolean isOwned() {

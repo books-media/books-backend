@@ -14,6 +14,9 @@ public class Anime {
     private Long id;
     private String name;
     private int numberOfEpisodes;
+    private int numberOfSeasons;
+    private boolean stillRunning;
+    private String imageUrl;
     private boolean owned;
     private int lastEpisodeSeen;
     private boolean subbed;
@@ -26,9 +29,13 @@ public class Anime {
 
     //**********************************************************
 
-    public Anime(String name, int numberOfEpisodes, boolean owned, int lastEpisodeSeen, boolean subbed, boolean dubbed) {
+
+    public Anime(String name, int numberOfEpisodes, int numberOfSeasons, boolean stillRunning, String imageUrl, boolean owned, int lastEpisodeSeen, boolean subbed, boolean dubbed) {
         this.name = name;
         this.numberOfEpisodes = numberOfEpisodes;
+        this.numberOfSeasons = numberOfSeasons;
+        this.stillRunning = stillRunning;
+        this.imageUrl = imageUrl;
         this.owned = owned;
         this.lastEpisodeSeen = lastEpisodeSeen;
         this.subbed = subbed;
@@ -62,6 +69,30 @@ public class Anime {
 
     public void setNumberOfEpisodes(int numberOfEpisodes) {
         this.numberOfEpisodes = numberOfEpisodes;
+    }
+
+    public int getNumberOfSeasons() {
+        return numberOfSeasons;
+    }
+
+    public void setNumberOfSeasons(int numberOfSeasons) {
+        this.numberOfSeasons = numberOfSeasons;
+    }
+
+    public boolean isStillRunning() {
+        return stillRunning;
+    }
+
+    public void setStillRunning(boolean stillRunning) {
+        this.stillRunning = stillRunning;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public boolean isOwned() {

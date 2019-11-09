@@ -14,6 +14,7 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
+    private String imageUrl;
     private String  authorFirstName;
     private String authorLastName;
     private boolean owned;
@@ -25,8 +26,10 @@ public class Book {
 
     //**********************************************************
 
-    public Book(String title, String authorFirstName, String authorLastName, boolean owned, Date lastRead) {
+
+    public Book(String title, String imageUrl, String authorFirstName, String authorLastName, boolean owned, Date lastRead) {
         this.title = title;
+        this.imageUrl = imageUrl;
         this.authorFirstName = authorFirstName;
         this.authorLastName = authorLastName;
         this.owned = owned;
@@ -51,6 +54,14 @@ public class Book {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public String getAuthorFirstName() {
